@@ -1,0 +1,579 @@
+/**
+* Template Name: Arsha
+* Updated: Jul 27 2023 with Bootstrap v5.3.1
+* Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #47b2e4;
+  text-decoration: none;
+}
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #37517e;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #37517e;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #47b2e4;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #6bc1e9;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+}
+
+#header.header-scrolled,
+#header.header-inner-pages {
+  background: rgba(40, 58, 90, 0.9);
+}
+
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#header .logo a {
+  color: #fff;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #47b2e4;
+}
+
+.navbar .getstarted,
+.navbar .getstarted:focus {
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 14px;
+  border: 2px solid #47b2e4;
+  font-weight: 600;
+}
+
+.navbar .getstarted:hover,
+.navbar .getstarted:focus:hover {
+  color: #fff;
+  background: #31a9e1;
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  font-weight: 500;
+  color: #0c3c53;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #47b2e4;
+}
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+  }
+}
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 15px 0;
+  background: #f3f5fa;
+  min-height: 40px;
+  margin-top: 72px;
+  box-shadow: 1px 2px 10px 1px;
+}
+.imgAnkit img{
+  width: 50%;
+  border-radius: 90px;
+  margin-left: 170px;
+  margin-top: 115px;
+  margin-bottom: 115px;
+}
+.textankit{
+  margin-top:180px;
+}
+.footername{
+  text-align: center;
+}
+/***********hover button**********/
+.button {
+  border-radius: 50px;
+  background-color: #063f6b;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 20px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*********mobile ********************/
+@media only screen and (max-width: 768px) {
+  .breadcrumbs {
+    padding: 15px 0;
+    background: #f3f5fa;
+    min-height: 40px;
+    margin-top: 72px;
+    box-shadow: 1px 2px 10px 1px;
+  }
+  .imgAnkit img{
+    width: 50%;
+    border-radius: 90px;
+    margin-left: 100px;
+    margin-top: 50px;
+  }
+  .textankit{
+    margin-top: -20px;
+    margin-bottom: 40px;
+  }
+  .footername{
+    text-align: center;
+  }
+ 
+  }
+
+  /************about page**************************/
+
+  .aboutcontainer{
+    
+  }
+
+
+  /******************contact page**********************/
+
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  overflow: hidden;
+}
+
+.section-title {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 35px;
+}
+
+.sec-pad {
+  padding: 60px 0 0;
+  margin: 50px 0;
+}
+
+.contact-sec {
+  align-item: center;
+  display: flex;
+  background-color: #5cbde466;
+}
+
+.contact-sec .contact-ul li,
+.contact-ul b {
+  font-size: 20px;
+  margin: 10px 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  word-wrap: break-word;
+}
+
+.contact-sec .contact-ul i {
+  font-size: 18px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.contact-detail a {
+  color: #000;
+  text-decoration: none;
+}
+
+.contact-sec .contact-ul li b:hover {
+  color: #f93;
+}
+
+.contact-sec .contact-ul li .fa-location-dot {
+  color: #f44337;
+  border: 2px solid #f4433790;
+}
+
+.contact-sec .contact-ul li .fa-phone {
+  color: #00b055;
+  border: 2px solid #00b05590;
+}
+
+.contact-sec .contact-ul li .fa-envelope {
+  color: #ff6347;
+  border: 2px solid #ff634790;
+}
+
+.contact-detail span {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+}
+.contact-detail span a {
+  font-size: 20px;
+  padding: 6px 12px;
+  color: #000;
+  border-radius: 50%;
+  margin: 0px 5px;
+}
+.contact-detail span .fb {
+  color: #3b5998;
+  border: 3px solid #3b5998;
+}
+.contact-detail span .fb:hover {
+  color: #fff;
+  background-color: #3b5998;
+}
+
+.contact-detail span .insta {
+  color: #833ab4;
+  border: 3px solid #833ab4;
+}
+.contact-detail span .insta:hover {
+  color: #fff;
+  background-color: #833ab4;
+}
+
+.contact-detail span .twitter {
+  color: #00acee;
+  border: 3px solid #00acee;
+}
+.contact-detail span .twitter:hover {
+  color: #fff;
+  background-color: #00acee;
+}
+
+form.contFrm {
+  max-width: 396px;
+  margin: auto;
+}
+
+.inptFld {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  margin: 0 0 10px;
+  border-radius: 8px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #000;
+}
+
+.inptFld:focus {
+  outline-offset: -4px;
+  outline: 1px solid #f93;
+}
+
+.contFrm textarea {
+  height: 75px;
+  padding-top: 5px;
+}
+.inptBtn {
+  height: 50px;
+  border: 0;
+  background: #2a4999;
+  font-size: 14px;
+  color: #fff;
+  margin: auto;
+  letter-spacing: 1px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+}
+
+/* Responcive css Start */
+
+@media (max-width: 991px) {
+  .sec-pad {
+    padding: 20px 0 0px;
+  }
+
+  .contact-sec .contact-ul li,
+  .contact-ul b {
+    font-size: 18px;
+  }
+
+  .contact-sec .contact-ul i {
+    font-size: 14px;
+    padding: 6px;
+    margin-right: 6px;
+  }
+
+  .inptFld {
+    height: 40px;
+    margin: 0 0 10px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-detail span {
+    width: auto;
+  }
+  .contact-detail span a {
+    font-size: 18px;
+    padding: 5px 10px;
+    color: #000;
+    border-radius: 50%;
+    margin: 0px 5px 20px;
+  }
+  .mainPageContact{
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .section-title {
+    font-size: 26px;
+    font-weight: 500;
+  }
+  .contact-sec {
+    border-radius: 10% 10% 0% 0% / 5% 5% 0% 0%;
+  }
+
+  .contact-sec .contact-ul i {
+    border: none;
+  }
+  .inptFld {
+    height: 36px;
+    margin: 0 0 8px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-sec .contact-ul li,
+  .contact-ul b {
+    font-size: 16px;
+  }
+}
+
+ 
